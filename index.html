@@ -1,0 +1,302 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerAI | Career Guidance Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            <span class="logo-icon">✦</span>
+            CareerAI
+        </div>
+
+        <p class="menu-label">MENU</p>
+
+        <nav>
+            <a href="#dashboard" class="nav-link active">▦ Dashboard</a>
+            <a href="#profile" class="nav-link">◉ My Profile</a>
+            <a href="#assessment" class="nav-link">✓ Assessment</a>
+            <a href="#careers" class="nav-link">✧ Career Matches</a>
+            <a href="#roadmap" class="nav-link">⌁ Learning Roadmap</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="help-card">
+                <div>✦</div>
+                <h3>Your future starts here!</h3>
+                <p>Discover your skills and explore your career possibilities.</p>
+            </div>
+            <button id="themeBtn" class="theme-btn">☾ Change Theme</button>
+        </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <p class="small-text">CAREER DEVELOPMENT PLATFORM</p>
+                <h2>Career Dashboard</h2>
+            </div>
+            <div class="user-info">
+                <div class="avatar">S</div>
+                <div>
+                    <strong id="headerName">Student</strong>
+                    <p>Career Explorer</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Dashboard -->
+        <section id="dashboard" class="welcome-section">
+            <div>
+                <p class="welcome-label">WELCOME TO CAREERAI</p>
+                <h1>Build Your Future.<br><span>Discover Your Potential.</span></h1>
+                <p class="welcome-description">
+                    Find the right career based on your skills, interests
+                    and learning goals.
+                </p>
+                <a href="#assessment" class="primary-btn">Start Assessment →</a>
+            </div>
+            <div class="welcome-art">✦</div>
+        </section>
+
+        <!-- Statistics -->
+        <section class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon purple">◎</div>
+                <p>Skills Selected</p>
+                <h2 id="skillCount">0</h2>
+                <span>Your technical skills</span>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon blue">✧</div>
+                <p>Career Matches</p>
+                <h2 id="matchCount">0</h2>
+                <span>Available career roles</span>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon green">✓</div>
+                <p>Profile Status</p>
+                <h2 id="profileStatus">0%</h2>
+                <span>Profile completion</span>
+            </div>
+        </section>
+
+        <!-- Profile -->
+        <section id="profile" class="panel">
+            <div class="section-heading">
+                <div>
+                    <p class="section-label">PERSONAL INFORMATION</p>
+                    <h2>My Profile</h2>
+                </div>
+                <span class="status-pill">Student Profile</span>
+            </div>
+
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="studentName">Full Name</label>
+                    <input id="studentName" type="text" placeholder="Enter your name">
+                </div>
+
+                <div class="form-group">
+                    <label for="education">Education</label>
+                    <select id="education">
+                        <option value="">Select education</option>
+                        <option>B.Tech</option>
+                        <option>B.E</option>
+                        <option>BCA</option>
+                        <option>B.Sc Computer Science</option>
+                        <option>MCA</option>
+                        <option>M.Sc</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="interest">Career Interest</label>
+                    <select id="interest">
+                        <option value="">Select your interest</option>
+                        <option value="development">Software Development</option>
+                        <option value="data">Data Science</option>
+                        <option value="ai">Artificial Intelligence</option>
+                        <option value="design">UI/UX Design</option>
+                        <option value="security">Cybersecurity</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="experience">Experience Level</label>
+                    <select id="experience">
+                        <option>Fresher</option>
+                        <option>Beginner</option>
+                        <option>Intermediate</option>
+                        <option>Advanced</option>
+                    </select>
+                </div>
+            </div>
+
+            <button class="primary-btn" id="saveProfile">Save Profile</button>
+        </section>
+
+        <!-- Skill Assessment -->
+        <section id="assessment" class="panel">
+            <div class="section-heading">
+                <div>
+                    <p class="section-label">TECHNICAL ASSESSMENT</p>
+                    <h2>Select Your Skills</h2>
+                    <p class="muted">Choose the technologies you already know.</p>
+                </div>
+            </div>
+
+            <div class="skills-grid" id="skillsContainer">
+
+                <label class="skill-option">
+                    <input type="checkbox" value="HTML">
+                    <span>HTML</span>
+                </label>
+
+                <label class="skill-option">
+                    <input type="checkbox" value="CSS">
+                    <span>CSS</span>
+                </label>
+
+                <label class="skill-option">
+                    <input type="checkbox" value="JavaScript">
+                    <span>JavaScript</span>
+                </label>
+
+                <label class="skill-option">
+                    <input type="checkbox" value="Python">
+                    <span>Python</span>
+                </label>
+
+                <label class="skill-option">
+                    <input type="checkbox" value="Java">
+                    <span>Java</span>
+                </label>
+
+                <label class="skill-option">
+                    <input type="checkbox" value="React">
+                    <span>React</span>
+                </label>
+
+                <label class="skill-option">
+                    <input type="checkbox" value="SQL">
+                    <span>SQL</span>
+                </label>
+
+                <label class="skill-option">
+                    <input type="checkbox" value="Machine Learning">
+                    <span>Machine Learning</span>
+                </label>
+
+                <label class="skill-option">
+                    <input type="checkbox" value="Git">
+                    <span>Git</span>
+                </label>
+
+                <label class="skill-option">
+                    <input type="checkbox" value="Figma">
+                    <span>Figma</span>
+                </label>
+
+                <label class="skill-option">
+                    <input type="checkbox" value="Data Analysis">
+                    <span>Data Analysis</span>
+                </label>
+
+                <label class="skill-option">
+                    <input type="checkbox" value="Cybersecurity">
+                    <span>Cybersecurity</span>
+                </label>
+
+            </div>
+
+            <button class="primary-btn" id="analyzeBtn">
+                Analyze My Skills →
+            </button>
+            <p id="analysisMessage" class="message"></p>
+        </section>
+
+        <!-- Career recommendations -->
+        <section id="careers" class="panel">
+            <div class="section-heading">
+                <div>
+                    <p class="section-label">PERSONALIZED SUGGESTIONS</p>
+                    <h2>Recommended Careers</h2>
+                    <p class="muted">Career matches based on your selected skills.</p>
+                </div>
+            </div>
+
+            <input id="careerSearch" class="search-box"
+                   type="search" placeholder="Search career roles...">
+
+            <div id="careerResults" class="career-grid">
+                <div class="empty-state">
+                    <div>✧</div>
+                    <h3>Discover Your Career</h3>
+                    <p>Select your skills and click Analyze My Skills.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Roadmap -->
+        <section id="roadmap" class="panel">
+            <div class="section-heading">
+                <div>
+                    <p class="section-label">YOUR LEARNING JOURNEY</p>
+                    <h2>Career Learning Roadmap</h2>
+                </div>
+            </div>
+
+            <div id="roadmapContent" class="roadmap-content">
+                <p class="muted">Analyze your skills and select a career to see your learning roadmap.</p>
+            </div>
+        </section>
+
+        <!-- Career quiz -->
+        <section class="panel quiz-panel">
+            <div class="section-heading">
+                <div>
+                    <p class="section-label">KNOW YOURSELF</p>
+                    <h2>Career Interest Quiz</h2>
+                </div>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Which activity do you enjoy most?</h3>
+                <label><input type="radio" name="quiz" value="development"> Building websites and applications</label>
+                <label><input type="radio" name="quiz" value="data"> Working with data and finding patterns</label>
+                <label><input type="radio" name="quiz" value="ai"> Exploring AI and intelligent systems</label>
+                <label><input type="radio" name="quiz" value="design"> Creating attractive user interfaces</label>
+                <label><input type="radio" name="quiz" value="security"> Understanding digital security</label>
+            </div>
+
+            <button class="primary-btn" id="quizBtn">Get My Interest Result</button>
+            <p id="quizResult" class="message"></p>
+        </section>
+
+        <footer>
+            <p>© 2026 CareerAI. Built with HTML, CSS & JavaScript.</p>
+            <p>Discover your skills. Shape your future.</p>
+        </footer>
+
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
